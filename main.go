@@ -15,10 +15,6 @@ type Vector struct {
 	End   Point
 }
 
-func crossProduct(v1 Vector, v2 Vector) float64 {
-	return (v1.Start.X-v1.End.X)*(v2.Start.Y-v2.End.Y) - (v1.Start.Y-v1.End.Y)*(v2.Start.X-v2.End.X)
-}
-
 func main() {
 	p1 := Point{X: 1, Y: 3}
 	p2 := Point{X: 10, Y: 20}
@@ -89,4 +85,8 @@ func dotProduct(v1 Vector, v2 Vector) float64 {
 	by := v2.End.Y - v2.Start.Y
 
 	return ax*bx + ay*by
+}
+
+func crossProduct(v1 Vector, v2 Vector) float64 {
+	return (v1.Start.X-v1.End.X)*(v2.Start.Y-v2.End.Y) - (v1.Start.Y-v1.End.Y)*(v2.Start.X-v2.End.X)
 }
